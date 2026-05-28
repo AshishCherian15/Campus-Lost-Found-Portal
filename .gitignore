@@ -1,0 +1,4 @@
+node_modules
+server/data/state.json
+public/uploads
+.DS_Store
