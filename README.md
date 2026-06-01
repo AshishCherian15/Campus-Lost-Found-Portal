@@ -1,51 +1,45 @@
 # Campus Lost & Found Portal
 
-A full-stack campus lost and found portal where students can register, post lost or found items, search listings, request claims, and let item owners or admins moderate requests.
-
-## Features
-
-- Student registration and login with profile details
-- Post lost or found items with descriptions, location, category, and image uploads
-- Browse and search items by keyword, status, and category
-- Claim request flow with approve/reject actions for owners
-- Admin dashboard for users, posts, and claim moderation
-- Responsive UI designed for desktop and mobile
+Campus Lost & Found Portal is a React and Node.js app for reporting lost and found items, browsing listings, submitting claim requests, and moderating posts from an admin view.
 
 ## Tech Stack
 
-- Front end: HTML, CSS, JavaScript
-- Back end: Node.js, Express.js
-- File uploads: Multer
-- Data storage: Local JSON persistence with file-backed state
+- Front end: React, Vite, React Router, Tailwind CSS v4
+- Back end: Node.js, Express
+- Storage: In-memory seed data in the development server
 
-## Setup Instructions
+## Run Locally
 
-1. Install Node.js 18 or newer.
-2. Install dependencies:
+1. Install dependencies.
 
    ```bash
    npm install
    ```
 
-3. Start the app:
+2. Start the development server.
 
    ```bash
-   npm start
+   npm run dev
    ```
 
-4. Open the site at `http://localhost:3000`.
+3. Open the app at `http://localhost:3000`.
+
+For a production-style run:
+
+```bash
+npm run build
+npm start
+```
 
 ## Demo Accounts
 
-- Admin: `admin@campus.local` / `Admin@123`
-- Student: `aarav@campus.local` / `Student@123`
-- Student: `maya@campus.local` / `Student@123`
-
-## Live Demo
-
-Not deployed yet.
+- Admin: `admin@campus.edu` / password ignored for the demo login
+- Student: `alice@campus.edu`
+- Student: `bob@campus.edu`
+- Student: `charlie@campus.edu`
 
 ## Notes
 
-- Uploaded images are stored locally in `public/uploads`.
-- Application data is persisted in `server/data/state.json`.
+- Item and claim data reset when the server restarts.
+- Uploaded images are stored under `public/uploads`.
+- The server serves the Vite app and the API from the same process.
